@@ -1,0 +1,34 @@
+.QuestionResults {
+    width: 100%;
+}
+
+.AnswersResults {
+    text-align: left;
+    padding-bottom: 0;
+}
+
+.AnswersResults p {
+    color: var(--front-color);
+}
+
+@media (max-width: 768px) {
+    .QuestionResults p, .QuestionResults code, .AnswersResults p {
+        font-size: 90%;
+    }
+}
+
+/* .MuiIconButton-root {
+    padding: 0;
+} */
+
+.MuiButtonBase-root, .MuiAccordionDetails-root {
+    background-color: var(--back-color)!important;
+}
+
+.MuiSvgIcon-root {
+    color: var(--front-color);
+}
+
+.MuiAccordionDetails-root {
+    color: var(--front-color)
+}

@@ -36,3 +36,123 @@
     transform: rotate(360deg);
   }
 }
+
+.Brazil {
+  background-color:  var(--brazil-back-color);
+  --back-color: var(--brazil-back-color);
+  color: var(--brazil-front-color);
+  --front-color: var(--brazil-front-color);
+  --title-color: var(--brazil-title-color);
+  --check-color: var(--brazil-check-color);
+  --button-text-color: var(--brazil-button-text-color);
+  --button-color: var(--brazil-button-color);
+  --button-hover-color: var(--brazil-button-hover-color);
+  --button-2-color: var(--brazil-button-2-color);
+  --button-2-hover-color: var(--brazil-button-2-hover-color);
+  --question-code-color: var(--brazil-question-code-color);
+  --reponses-code-color: var(--brazil-reponses-code-color);
+  --links-color: var(--brazil-links-color);
+
+}
+  
+.Darcula {
+  background-color:  var(--darcula-back-color);
+  --back-color: var(--darcula-back-color);
+  color: var(--darcula-front-color);
+  --front-color: var(--darcula-front-color);
+  --title-color: var(--darcula-title-color);
+  --check-color: var(--darcula-check-color);
+  --button-text-color: var(--darcula-button-text-color);
+  --button-color: var(--darcula-button-color);
+  --button-hover-color: var(--darcula-button-hover-color);
+  --button-2-color: var(--darcula-button-2-color);
+  --button-2-hover-color: var(--darcula-button-2-hover-color);
+  --question-code-color: var(--darcula-question-code-color);
+  --reponses-code-color: var(--darcula-reponses-code-color);
+  --links-color: var(--darcula-links-color);
+}
+
+.Forest {
+  background-color:  var(--forest-back-color);
+  --back-color: var(--forest-back-color);
+  color: var(--forest-front-color);
+  --front-color: var(--forest-front-color);
+  --title-color: var(--forest-title-color);
+  --check-color: var(--forest-check-color);
+  --button-text-color: var(--forest-button-text-color);
+  --button-color: var(--forest-button-color);
+  --button-hover-color: var(--forest-button-hover-color);
+  --button-2-color: var(--forest-button-2-color);
+  --button-2-hover-color: var(--forest-button-2-hover-color);
+  --question-code-color: var(--forest-question-code-color);
+  --reponses-code-color: var(--forest-reponses-code-color);
+  --links-color: var(--forest-links-color);
+}
+
+.Shades {
+  background-color:  var(--shades-back-color);
+  --back-color: var(--shades-back-color);
+  color: var(--shades-front-color);
+  --front-color: var(--shades-front-color);
+  --title-color: var(--shades-title-color);
+  --check-color: var(--shades-check-color);
+  --button-text-color: var(--shades-button-text-color);
+  --button-color: var(--shades-button-color);
+  --button-hover-color: var(--shades-button-hover-color);
+  --button-2-color: var(--shades-button-2-color);
+  --button-2-hover-color: var(--shades-button-2-hover-color);
+  --question-code-color: var(--shades-question-code-color);
+  --reponses-code-color: var(--shades-reponses-code-color);
+  --links-color: var(--shades-links-color);
+}
+
+.Purple {
+  background-color:  var(--purple-back-color);
+  --back-color: var(--purple-back-color);
+  color: var(--purple-front-color);
+  --front-color: var(--purple-front-color);
+  --title-color: var(--purple-title-color);
+  --check-color: var(--purple-check-color);
+  --button-text-color: var(--purple-button-text-color);
+  --button-color: var(--purple-button-color);
+  --button-hover-color: var(--purple-button-hover-color);
+  --button-2-color: var(--purple-button-2-color);
+  --button-2-hover-color: var(--purple-button-2-hover-color);
+  --question-code-color: var(--purple-question-code-color);
+  --reponses-code-color: var(--purple-reponses-code-color);
+  --links-color: var(--purple-links-color);
+}
+
+.Bordeaux {
+  background-color:  var(--bordeaux-back-color);
+  --back-color: var(--bordeaux-back-color);
+  color: var(--bordeaux-front-color);
+  --front-color: var(--bordeaux-front-color);
+  --title-color: var(--bordeaux-title-color);
+  --check-color: var(--bordeaux-check-color);
+  --button-text-color: var(--bordeaux-button-text-color);
+  --button-color: var(--bordeaux-button-color);
+  --button-hover-color: var(--bordeaux-button-hover-color);
+  --button-2-color: var(--bordeaux-button-2-color);
+  --button-2-hover-color: var(--bordeaux-button-2-hover-color);
+  --question-code-color: var(--bordeaux-question-code-color);
+  --reponses-code-color: var(--bordeaux-reponses-code-color);
+  --links-color: var(--bordeaux-links-color);
+}
+
+.Africa {
+  background-color:  var(--africa-back-color);
+  --back-color: var(--africa-back-color);
+  color: var(--africa-front-color);
+  --front-color: var(--africa-front-color);
+  --title-color: var(--africa-title-color);
+  --check-color: var(--africa-check-color);
+  --button-text-color: var(--africa-button-text-color);
+  --button-color: var(--africa-button-color);
+  --button-hover-color: var(--africa-button-hover-color);
+  --button-2-color: var(--africa-button-2-color);
+  --button-2-hover-color: var(--africa-button-2-hover-color);
+  --question-code-color: var(--africa-question-code-color);
+  --reponses-code-color: var(--africa-reponses-code-color);
+  --links-color: var(--africa-links-color);
+}

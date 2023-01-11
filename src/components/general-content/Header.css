@@ -1,0 +1,57 @@
+  .CustomHeader {
+    background-color : #343a40;
+    border-bottom: 2px solid var(--front-color);
+    height : 80px;
+  }
+
+  .CustomHeader a {
+    color: var(--links-color);
+  }
+  
+  .CustomButton {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .ThemeChoice {
+    color: var(--front-color);
+    border-radius: 5px;
+  }
+
+  .navbar-brand {
+    margin-right: 0;
+  }
+
+  #dropdown-item-button, #dropdown-item-button:hover, #dropdown-item-button:focus {
+    background-color: var(--back-color);
+    color: var(--front-color);
+  }
+
+  #dropdown-item-button, #dropdown-item-button:focus {
+    border-color: var(--back-color);
+  }
+
+  #dropdown-item-button:hover {
+    border-color: var(--front-color);
+  }
+
+  .dropdown-menu {
+    padding: 0;
+  }
+
+  .PullRight {
+    margin-left: auto;
+    margin-right: 20px;   
+    width: 35px;
+    height: 35px;
+  }
+
+  .Offset {
+    margin-right: 50px;
+  }
+
+  @media(max-width:768px) {
+    .Offset {
+        margin-right: 30px;
+    }
+  }

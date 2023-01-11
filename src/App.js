@@ -1,25 +1,45 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Header from './components/general-content/Header';
+import Home from './components/home/Home';
+import Test from './components/test/Test';
+import Results from './components/results/Results';
+
+import Error from './components/general-content/Error';
+import Footer from './components/general-content/Footer';
+import ThemeContext from './components/context/ThemeContext';
+
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 
 function App() {
+
+  const [theme, setTheme] = React.useState("Brazil");
+
+  const themeContext = {
+    theme: theme,
+    updateTheme: setTheme
+  };
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+        <div className="App">
+            <ThemeContext.Provider value={themeContext} >
+                    <div className={theme}>
+                        <BrowserRouter>
+                            <Header />
+                                <Switch>
+                                    <Route exact path="/" component={Home} />
+                                    <Route path="/test" component={Test} />
+                                    <Route path="/results" component={Results} />
+                                    <Route path="/error" component={Error} />
+                                    <Redirect to="/" />
+                                </Switch>
+                            <Footer />
+                        </BrowserRouter>
+                    </div>
+            </ThemeContext.Provider>
+        </div>
+        );
 }
 
 export default App;

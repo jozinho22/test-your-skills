@@ -1,0 +1,44 @@
+.TopicListContainer th, .TopicListContainer td {
+    font-family: 'choco', Fallback, sans-serif;
+    font-size: x-large;
+    color:var(--front-color);
+}
+
+.TopicListContainer {
+    position: relative;
+}
+
+.TopicListTable {
+    width : 50%;
+    margin: auto;
+}
+
+@media(max-width: 768px) {
+    .TopicListContainer {
+        padding-bottom: 0;
+    }    
+    .TopicListTable {
+        width : 30%;
+    }
+    .CustomMoveArrow {
+        display: none;
+    }
+}
+
+.ChooseAllButton {
+	background-color: var(--button-2-color);
+    border-color: var(--button-2-color);
+    color: var(--button-text-color);
+}
+
+.ChooseAllButton:hover, .ChooseAllButton:active {
+    background-color: var(--button-2-hover-color);
+    border-color: var(--button-2-hover-color);
+    color: var(--button-text-color);
+ }
+
+.ChooseAllButton:focus {
+    background-color: var(--button-2-color)!important;
+    border-color: var(--button-2-color)!important;
+    color: var(--button-text-color)!important;
+ }

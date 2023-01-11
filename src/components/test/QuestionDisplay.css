@@ -1,0 +1,147 @@
+.QuestionContainer {
+    position: relative;
+    width: 80%;
+    border-color: black;
+    background-color: var(--front-color);
+    border-radius: 10px;
+    color: var(--back-color);
+    text-align: left;
+    padding: 20px;
+}
+
+.QuestionContainer code {
+    color: var(--question-code-color);
+}
+
+.MuiAccordionSummary-content {
+    overflow: auto;
+}
+
+.AnswersContainer code {
+    color: var(--reponses-code-color);
+}
+
+.AnswersContainer {
+    position: relative;
+    width: 80%;
+    text-align: left;
+    padding-top: 20px;
+}
+
+.AnswersContainer p { 
+    padding-left: 20px;
+    text-align: justify;
+}
+
+.AnswersContainer p:hover {
+    cursor:pointer;
+}
+
+.AnswersContainer .table td {
+    padding: 0;
+}
+
+.AnswersContainer .alert {
+    top: 20px;
+}
+
+.CheckQuestion, .CheckQuestionInvisible {
+    color: var(--check-color); 
+    width: 25px;
+    height: 25px;
+}
+
+.CheckQuestion {
+    color: var(--check-color); 
+}
+
+.CheckQuestionInvisible {
+    opacity: 0;
+}
+
+.Answers {
+    color: var(--front-color);
+}
+
+.Timer {
+    position: relative;
+    height: 60px;
+}
+
+.Timer h1 {
+   font-family: var(--choco-font-family);
+   font-size: x-large;
+}
+
+.ButtonPlacementQuestions {
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+.Indent1 {
+    padding-left: 20px;
+}
+
+.Indent2 {
+    padding-left: 40px;
+}
+
+.Indent3 {
+    padding-left: 60px;
+}
+
+.Indent4 {
+    padding-left: 80px;
+}
+
+.Indent5 {
+    padding-left: 100px;
+}
+
+.Indent6 {
+    padding-left: 120px;
+}
+
+.Keyword {
+    font-weight: bold;
+    color: var(--back-color);
+}
+
+@media (max-width: 768px) {
+
+    .QuestionContainer {
+        width: 100%;
+    }
+
+    .AnswersContainer {
+        width: 100%;
+    }
+    
+    .QuestionContainer p, .QuestionContainer code, .AnswersContainer p {
+        font-size: 90%;
+    }
+
+    .Indent1 {
+        padding-left: 5px;
+    }
+    
+    .Indent2 {
+        padding-left: 10px;
+    }
+    
+    .Indent3 {
+        padding-left: 15px;
+    }
+    
+    .Indent4 {
+        padding-left: 20px;
+    }
+    
+    .Indent5 {
+        padding-left: 25px;
+    }
+    
+    .Indent6 {
+        padding-left: 30px;
+    }
+}

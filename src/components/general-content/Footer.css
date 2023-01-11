@@ -1,0 +1,14 @@
+  .CustomFooter {
+    background-color : #343a40;
+	/* border-bottom: 2px solid rgba(255, 255, 255, .5); */
+    border-top: 2px solid var(--front-color);
+    color: cornsilk;
+    height: 40px;
+  }
+
+  .CopyRight {
+    width: 100%;
+    color: grey;
+  }
+
+  

@@ -1,4 +1,103 @@
-body {
+body { 
+  position:absolute; 
+  top:0; bottom:0; right:0; left:0; 
+  min-height: 100vh;
+
+  --choco-font-family:'choco', Fallback, sans-serif;
+
+  /* different themes */
+
+  --brazil-back-color:  rgb(201, 193, 85);
+  --brazil-front-color:  #516ece;
+  --brazil-title-color: rgb(78, 139, 70);
+  --brazil-check-color: rgb(64, 112, 58);
+  --brazil-button-text-color: var(--brazil-back-color);
+  --brazil-button-color: var(--brazil-title-color);
+  --brazil-button-hover-color:var(--brazil-check-color);
+  --brazil-button-2-color:  #516ece;
+  --brazil-button-2-hover-color: rgb(63, 73, 158);
+  --brazil-question-code-color:rgb(179, 175, 175);
+  --brazil-reponses-code-color: #2a418b;
+  --brazil-links-color: var(--brazil-back-color);
+
+  --darcula-back-color:  #343a40;
+  --darcula-front-color: grey;
+  --darcula-title-color: rgb(98, 72, 141);
+  --darcula-check-color: green;
+  --darcula-button-text-color: var(--darcula-front-color);
+  --darcula-button-color: var(--darcula-title-color);
+  --darcula-button-hover-color:  rgb(86, 62, 124);
+  --darcula-button-2-color: #A0522D;
+  --darcula-button-2-hover-color: #854223;
+  --darcula-question-code-color: #69341b;
+  --darcula-reponses-code-color: #A0522D;
+  --darcula-links-color: var(--darcula-button-2-color);
+
+  --forest-back-color:  rgb(1, 80, 1);
+  --forest-front-color: grey;
+  --forest-title-color: grey;
+  --forest-check-color: grey;
+  --forest-button-text-color: var(--forest-back-color);
+  --forest-button-color: #A0522D;
+  --forest-button-hover-color:  #854223;
+  --forest-button-2-color: var(--forest-title-color);
+  --forest-button-2-hover-color:var(--forest-check-color);
+  --forest-question-code-color: #6d4817;
+  --forest-reponses-code-color: #976420;
+  --forest-links-color: var(--forest-back-color);
+
+  --shades-back-color:  rgb(155, 151, 151);
+  --shades-front-color: rgb(68, 67, 67);
+  --shades-title-color: rgb(68, 67, 67);
+  --shades-check-color:#136818;
+  --shades-button-text-color: var(--shades-back-color);
+  --shades-button-color: #136818;
+  --shades-button-hover-color: #0e4d12;
+  --shades-button-2-color: var(--shades-title-color);
+  --shades-button-2-hover-color:var(--shades-check-color);
+  --shades-question-code-color: #177c1e;
+  --shades-reponses-code-color: #0e4d12;
+  --shades-links-color: var(--shades-back-color);
+
+  --purple-back-color:  rgb(88, 64, 110);
+  --purple-front-color: grey;
+  --purple-title-color: #9b8f29;
+  --purple-check-color: rgb(179, 141, 96);
+  --purple-button-text-color: var(--purple-back-color);
+  --purple-button-color: #9b8f29;
+  --purple-button-hover-color: #7c731e;
+  --purple-button-2-color: var(--purple-title-color);
+  --purple-button-2-hover-color:var(--purple-check-color);
+  --purple-question-code-color: #272726;
+  --purple-reponses-code-color: #757272;
+  --purple-links-color: var(--purple-back-color);
+
+  --bordeaux-back-color:  rgb(65, 5, 5);
+  --bordeaux-front-color: grey;
+  --bordeaux-title-color: rgb(179, 141, 96);
+  --bordeaux-check-color: rgb(179, 141, 96);
+  --bordeaux-button-text-color: var(--bordeaux-back-color);
+  --bordeaux-button-color: rgb(179, 141, 96);
+  --bordeaux-button-hover-color: rgb(156, 122, 81);
+  --bordeaux-button-2-color: var(--bordeaux-title-color);
+  --bordeaux-button-2-hover-color:var(--bordeaux-check-color);
+  --bordeaux-question-code-color:  rgb(201, 167, 126);
+  --bordeaux-reponses-code-color: rgb(163, 133, 97);
+  --bordeaux-links-color: var(--bordeaux-back-color);
+
+  --africa-back-color:  rgb(197, 171, 25);
+  --africa-front-color: rgb(65, 117, 72);
+  --africa-title-color: rgb(65, 117, 72);
+  --africa-check-color:  #8d1515;
+  --africa-button-text-color: var(--africa-back-color);
+  --africa-button-color: #8d1515;
+  --africa-button-hover-color: #5a1414;
+  --africa-button-2-color: var(--africa-title-color);
+  --africa-button-2-hover-color:var(--africa-check-color);
+  --africa-question-code-color: #4b1212;
+  --africa-reponses-code-color: #661212;
+  --africa-links-color: var(--africa-back-color);
+
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -8,6 +107,12 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+@font-face {
+  font-family: 'choco';
+  font-style: normal;
+  font-weight: normal; 
+  src: local('Myriad Pro Regular'), url('./fonts/choco.otf') format('truetype');
 }

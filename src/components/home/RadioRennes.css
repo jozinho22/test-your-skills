@@ -1,0 +1,11 @@
+.RadioRennes {
+    position: relative;
+    width: 50%;
+    height: 100px;
+}
+
+@media(max-width:768px) {
+    .RadioRennes {
+        width: 80%;
+    } 
+}

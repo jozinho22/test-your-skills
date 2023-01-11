@@ -1,0 +1,64 @@
+.RelativeContainer {
+    position: relative;
+    /* refers to the Header */
+    margin-top: 80px;
+    /* refers to the Footer */
+    padding-bottom: 40px; 
+    min-height: 100vh; 
+}
+
+.ChocoTitle {
+    position: relative; 
+    padding-top: 35px;
+    padding-bottom: 35px;
+    font-family: var(--choco-font-family);
+    font-size: xx-large;
+    color: var(--title-color);
+    text-align: center;
+}
+
+.CustomMoveArrow {
+    width: 40px;
+    height: 40px;
+}
+
+.LoadingSpinner {
+    position: relative; /* or absolute */
+    top: 150px;
+    color: var(--front-color);
+    background-color: var(--back-color);
+}
+
+.BasicButton {
+	background-color: var(--button-color);
+    border-color: var(--button-color);
+    color: var(--button-text-color);
+}
+
+.BasicButton:hover {
+    background-color: var(--button-hover-color);
+    border-color: var(--button-hover-color);
+    color: var(--button-text-color);
+ }
+
+.BasicButton:focus, .BasicButton:active {
+    background-color: var(--button-hover-color)!important;
+    border-color: var(--button-hover-color)!important;
+    color: var(--button-text-color)!important;
+}
+
+.btn:focus, .btn:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.ButtonPlacement {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+@media(max-width:768px) {
+    .RelativeContainer {
+        padding-right: 15px;
+    }
+}
