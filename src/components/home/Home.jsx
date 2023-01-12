@@ -1,12 +1,10 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
-import HomeManager from './HomeManager';
 import jsonTopics from '../../resources/topics.json';
 import moveArrowTopics from './moveArrowTopics';
 import TopicListTitle from './TopicListTitle';
 import TopicList from './TopicList';
 import StartButton from './StartButton';
-import RadioRennes from './RadioRennes';
 import '../general-content/Basic.css';
 
 const Home = () => {
@@ -54,7 +52,6 @@ const Home = () => {
                     <StartButton 
                         topics={topics}
                         nbQuestions={nbQuestions}/>
-                    <RadioRennes /> 
                 </Container>
             );
 }

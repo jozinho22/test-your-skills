@@ -9,8 +9,6 @@ const Test = () => {
 
     const { topics } = useLocation();
     const { nbQuestions } = useLocation();
-
-    console.log(topics)
     
     const [questions, setQuestions] = React.useState(generateQuestions(topics, nbQuestions));
 
@@ -26,8 +24,6 @@ const Test = () => {
     const next = () => {
         setCount (count + 1);
     }
-
-     console.log(questions)
     
     return (
             <TestManager count={count} questions={questions} user={user}>

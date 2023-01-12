@@ -9,18 +9,11 @@ import './QuestionDisplay.css';
 const QuestionDisplay = 
         ({ questions, count, next, user, setUser }) => {
 
-            console.log(questions)
-
     const [checkedAnswerId, setCheckedAnswerId] = React.useState(0);
-   /* const [interpretation, setInterpretation] = React.useState([]);
-    const [showGreenAlert, setShowGreenAlert] = React.useState(false);
-    const [showRedAlert, setShowRedAlert] = React.useState(false);
-    const [inputText, setInputText] =  React.useState("");
-    const [nbLines, setNbLines] =  React.useState(4); */
 
     // Timer
     const [endTimer, setEndTimer] = React.useState(false);
-    const [minutes, setMinutes] = React.useState(1);
+    const [minutes, setMinutes] = React.useState(0);
     const [secondes, setSecondes] =  React.useState(0);
 
     const doNext = () => {
@@ -51,7 +44,7 @@ const QuestionDisplay =
     function checkAnswerIsTrue(id) {        
         const answersSlice = [...questions[count].answers];
         const index = answersSlice.findIndex(answer => answer.id === id);
-        return (answersSlice[index].isTrue);
+        return (answersSlice[index].goodAnswer);
     }
 
     function setTimer(timeInSecondes) {
@@ -65,7 +58,12 @@ const QuestionDisplay =
     // Timer
     React.useEffect(() => {
         setEndTimer(false);
-        setTimer(questions[count].time);
+        if(process.env.NODE_ENV === 'development') {
+            setTimer(5);
+        } else {
+            setTimer(60);
+        }
+        
         if(endTimer) {
             doNext();
         }
@@ -75,7 +73,6 @@ const QuestionDisplay =
                 <>
                     <Container className ="Timer">
                         <Timer 
-                            time={60}
                             secondes={secondes}
                             setSecondes={setSecondes} 
                             minutes={minutes}
@@ -83,7 +80,7 @@ const QuestionDisplay =
                             setEndTimer={setEndTimer} />
                     </Container>
                     <Container className="QuestionContainer">          
-                        <p>{HtmlParser(questions[count].text)}</p>                         
+                        {HtmlParser(questions[count].text)}                         
                     </Container>
                     <Container className="AnswersContainer">
                         <Table className="table-borderless">   

@@ -1,5 +1,6 @@
 import { Container, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import './StartButton.css';
 
 const StartButton = ( {topics, nbQuestions} ) => {
 
@@ -10,9 +11,9 @@ const StartButton = ( {topics, nbQuestions} ) => {
                     topics: topics,
                     nbQuestions: nbQuestions
                 }}>
-                <Container className="ButtonPlacement">
+                <Container className="StartButton ButtonPlacement">
                     <Button className="BasicButton" >
-                        Et c'est parti !
+                        Let's go
                     </Button>
                 </Container>
             </Link>
