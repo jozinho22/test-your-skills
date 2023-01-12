@@ -1,6 +1,5 @@
 import React from 'react';
 import { Container, Button } from 'react-bootstrap';
-import TopicListTable from './TopicListTable';
 import './TopicList.css';
 import '../general-content/Basic.css';
 
@@ -21,9 +20,8 @@ const TopicList = ( { topics, onChoose, chooseAll, allChosen } ) => {
                         }
                     </Button>
                 </Container>
-                <Container className="TopicList">
-                   
-                    {topics.map(topic => (
+                <Container className="TopicList"> 
+                    {topics.filter(t => t.topicKey !== "JAVASCRIPT").map(topic => (
                         <Button className={`TopicChoiceButton ${topic.chosen ? "Chosen" : ""}`}
                             key={topic.id}
                             topic={topic}

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Timer = ({time, secondes, setSecondes, minutes, setMinutes, setEndTimer}) => {
+const Timer = ({secondes, setSecondes, minutes, setMinutes, setEndTimer}) => {
 
     React.useEffect(()=>{
 
@@ -11,7 +11,7 @@ const Timer = ({time, secondes, setSecondes, minutes, setMinutes, setEndTimer}) 
             if (secondes === 0) {
                 if (minutes === 0) {
                     setEndTimer(true);
-                    setSecondes(time);
+                    setSecondes(0);
                     clearInterval(myInterval);
                 } else {
                     setMinutes(minutes - 1);
@@ -28,8 +28,8 @@ const Timer = ({time, secondes, setSecondes, minutes, setMinutes, setEndTimer}) 
     return (
         <div>
         { minutes === 0 && secondes === 0 ? 
-                null : 
-                    <h1> temps restant : {minutes} :{secondes < 10 ?  `0${secondes}` : secondes}</h1> 
+                 <h1>temps restant : 0 : 00</h1> : 
+                    <h1> temps restant : {minutes} :{secondes < 10 ?  ` 0${secondes}` : secondes}</h1> 
         }
         </div>
     )

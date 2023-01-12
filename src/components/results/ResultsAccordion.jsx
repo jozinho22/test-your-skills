@@ -1,11 +1,29 @@
 import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Accordion from '@material-ui/core/Accordion';
+import AccordionSummary from '@material-ui/core/AccordionSummary';
+import AccordionDetails from '@material-ui/core/AccordionDetails';
+import Typography from '@material-ui/core/Typography';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import HtmlParser from 'react-html-parser';
 
 import './ResultsAccordion.css';
 
+const useStyles = makeStyles((theme) => ({
+  root: {
+    width: '100%',
+  },
+  heading: {
+    fontSize: theme.typography.pxToRem(15),
+    fontWeight: theme.typography.fontWeightRegular,
+  },
+}));
+
 const ResultsAccordion = ( {questions, user} ) => {
+
+    console.log(user)
     
-    return <></>
-    /* const classes = useStyles();
+    const classes = useStyles();
 
     var indexes = [];
     for(var k = 0; k < questions.length ; k++) {
@@ -20,8 +38,9 @@ const ResultsAccordion = ( {questions, user} ) => {
                         expandIcon={<ExpandMoreIcon />}
                         aria-controls="panel1a-content"
                         id="panel1a-header"
+                        /* onClick={() => displayUserReponse(index)} */ >
                         <Typography className="QuestionContainer QuestionResults">
-                            {HtmlParser(questions[index].texte)}
+                            {HtmlParser(questions[index].text)}
                         </Typography>
                     </AccordionSummary>
                     <AccordionDetails >
@@ -31,46 +50,47 @@ const ResultsAccordion = ( {questions, user} ) => {
                                     <span>
                                         <span style={{textDecoration: "underline"}}>Votre réponse</span>
                                         <br></br>
-                                        <span>{HtmlParser(user.checkedAnswers[index].texte)}</span>
+                                        <span>{HtmlParser(user.checkedAnswers[index].text)}</span>
                                     </span>
                             }
-                            {user.checkedAnswers[index].id !== undefined ?
-                                user.checkedAnswers[index].isTrue ?
-                                    <span style={{color: "green"}}>
-                                        <br></br>
-                                        <br></br>
-                                        Bonne réponse !!!
-                                    </span>
-                                        :   <span>
-                                                <br></br>
-                                                <br></br>
-                                                <span style={{color: "red"}}>
-                                                    Mauvaise réponse...
-                                                </span>
-                                                <br></br>
-                                                <span style={{textDecoration: "underline"}}>
-                                                    La bonne réponse était :
-                                                </span>  
-                                                {questions[index].answers.map(answer => (
-                                                    <span key={answer.id}>
-                                                        {answer.isTrue ?
-                                                            <span>
-                                                                <br></br>
-                                                                {HtmlParser(answer.texte)}
-                                                            </span>  
-                                                                : null
-                                                        }
+                            {
+                                user.checkedAnswers[index].id !== undefined ?
+                                    user.checkedAnswers[index].goodAnswer ?
+                                        <span style={{color: "green"}}>
+                                            <br></br>
+                                            <br></br>
+                                            Bonne réponse !!!
+                                        </span>
+                                            :   <span>
+                                                    <br></br>
+                                                    <br></br>
+                                                    <span style={{color: "red"}}>
+                                                        Mauvaise réponse...
                                                     </span>
-                                                ))}
-                                            </span> 
-                                    :   null
+                                                    <br></br>
+                                                    <span style={{textDecoration: "underline"}}>
+                                                        La bonne réponse était :
+                                                    </span>  
+                                                    {questions[index].answers.map(answer => (
+                                                        <span key={answer.id}>
+                                                            {answer.goodAnswer ?
+                                                                <span>
+                                                                    <br></br>
+                                                                    {HtmlParser(answer.text)}
+                                                                </span>  
+                                                                    : null
+                                                            }
+                                                        </span>
+                                                    ))}
+                                                </span> 
+                                                    :   <></>
                             }
                         </Typography>
                     </AccordionDetails>
                 </Accordion>
             ))}
         </div>
-    ); */
+    );
 }
 
 export default ResultsAccordion;

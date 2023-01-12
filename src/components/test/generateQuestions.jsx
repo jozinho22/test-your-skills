@@ -16,11 +16,8 @@ const generateQuestions = (topics, nbQuestions) => {
     } else {
         questionsSorted = questions;
     }
-    
 
     let tenFirst = questionsSorted.slice(0, nbQuestions)
-    console.log(chosenTopics);
-    console.log(tenFirst);
 
     return tenFirst;
     

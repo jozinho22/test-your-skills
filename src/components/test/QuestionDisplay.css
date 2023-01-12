@@ -9,6 +9,12 @@
     padding: 20px;
 }
 
+@media (width < 450px) {
+    .QuestionContainer code {
+        font-size: small;
+    }
+}
+
 .QuestionContainer code {
     color: var(--question-code-color);
 }
@@ -63,19 +69,17 @@
     color: var(--front-color);
 }
 
+.ButtonPlacementQuestions {
+    padding-bottom: 20px;
+}
+
 .Timer {
     position: relative;
-    height: 60px;
 }
 
 .Timer h1 {
    font-family: var(--choco-font-family);
    font-size: x-large;
-}
-
-.ButtonPlacementQuestions {
-    padding-top: 30px;
-    padding-bottom: 50px;
 }
 
 .Indent1 {

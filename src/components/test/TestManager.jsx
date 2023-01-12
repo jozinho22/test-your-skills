@@ -4,9 +4,6 @@ import CustomSpinner from '../general-content/CustomSpinner';
 
 const TestManager = ({count, questions, user, children}) => {
 
-    console.log(questions)
-        console.log(count)
-
     return (
                 count < questions.length ? 
                     children

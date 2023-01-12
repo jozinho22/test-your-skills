@@ -11,9 +11,10 @@
 .TopicList {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     gap: 20px;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     width : 50%;
     margin: auto;
 }
@@ -23,7 +24,7 @@
         padding-bottom: 0;
     }    
     .TopicList {
-        width : 30%;
+        width : 100%;
     }
     .CustomMoveArrow {
         display: none;
@@ -56,8 +57,7 @@
 
  .TopicChoiceButton.Chosen {
     background-color: var(--button-3-hover-color)!important;
-    border-color: var(--button-3-hover-color)!important;
+    border-color: var(--button-3-hover-color)!important; 
  }
-
 
 

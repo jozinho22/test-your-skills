@@ -29,7 +29,6 @@ const Header = () => {
             </DropdownButton>
         );
     }
-    
 
     return (
         <Navbar className="CustomHeader" fixed="top" collapseOnSelect expand="lg" bg="dark" variant="dark">
