@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import Header from './components/general-content/Header';
 import Home from './components/home/Home';
 import Test from './components/test/Test';
@@ -10,6 +9,11 @@ import Footer from './components/general-content/Footer';
 import ThemeContext from './components/context/ThemeContext';
 
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
+
+import './App.css';
+
+import './components/general-content/Basic.css';
+
 
 function App() {
 

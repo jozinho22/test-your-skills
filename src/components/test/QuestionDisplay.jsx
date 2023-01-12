@@ -1,13 +1,15 @@
 import React from 'react';
-import { Form, Container, Button, Table } from 'react-bootstrap';
+import { Container, Button, Table } from 'react-bootstrap';
 import { FaArrowRight } from 'react-icons/fa';
-/* import HtmlParser from 'react-html-parser'; */
+import HtmlParser from 'react-html-parser'; 
 import Timer from './Timer';
-import '../general-content/Basic.css';
+import { parse } from 'node-html-parser';
 import './QuestionDisplay.css';
 
 const QuestionDisplay = 
         ({ questions, count, next, user, setUser }) => {
+
+            console.log(questions)
 
     const [checkedAnswerId, setCheckedAnswerId] = React.useState(0);
    /* const [interpretation, setInterpretation] = React.useState([]);
@@ -18,7 +20,7 @@ const QuestionDisplay =
 
     // Timer
     const [endTimer, setEndTimer] = React.useState(false);
-    const [minutes, setMinutes] = React.useState(0);
+    const [minutes, setMinutes] = React.useState(1);
     const [secondes, setSecondes] =  React.useState(0);
 
     const doNext = () => {
@@ -51,32 +53,6 @@ const QuestionDisplay =
         const index = answersSlice.findIndex(answer => answer.id === id);
         return (answersSlice[index].isTrue);
     }
-        
-    /* function buildUrl() {
-            let url = "/interpreter?s=";
-            url += inputText;
-            return url;
-    }
-    
-    function interpret() {
-        fetch(buildUrl())
-        .then(
-            response => response.json()
-        ) 
-        .then(data => {
-            setInterpretation(data);
-            console.log(data);
-        })
-        .catch(
-            err => {
-                var interpretationSlice = {...interpretation};
-                interpretationSlice.error = err;
-                setInterpretation(interpretationSlice);
-                console.log("err: ");
-                console.log(err);
-            }
-        );
-    } */
 
     function setTimer(timeInSecondes) {
         if(timeInSecondes < 59) {
@@ -94,48 +70,21 @@ const QuestionDisplay =
             doNext();
         }
     }, [endTimer, count]);
-
-    // A chaque question
-    /* React.useEffect(() => {
-        setNbLines(4);
-        setInputText("");
-        setInterpretation({});
-        setShowGreenAlert(false);
-        setShowRedAlert(false); 
-    }, [count]);*/
-
-    // Afficher les alertes
-/*     React.useEffect(() => {
-        if(interpretation.interpretated !== undefined && interpretation.interpretated !== null) {
-            setShowGreenAlert(true);
-        } else {
-            setShowGreenAlert(false);
-        }
-        if((interpretation.error !== undefined && interpretation.error !== null)  
-            || (interpretation.interpretated === null)) {
-            setShowRedAlert(true);
-        } else {
-            setShowRedAlert(false);
-        }
-    }, [interpretation]); */
     
     return (
-            <Form>
-                <Container className ="Timer">
-                    <Timer 
-                        time={questions[count].time}
-                        secondes={secondes}
-                        setSecondes={setSecondes} 
-                        minutes={minutes}
-                        setMinutes={setMinutes}
-                        setEndTimer={setEndTimer} />
-                </Container>
-                <Container className="QuestionContainer">          
-                    {/* <p>{HtmlParser(questions[count].texte)}</p> */}
-                </Container>
-
-                {questions[count].type === "normal" ?
-                    /* qcm */
+                <>
+                    <Container className ="Timer">
+                        <Timer 
+                            time={60}
+                            secondes={secondes}
+                            setSecondes={setSecondes} 
+                            minutes={minutes}
+                            setMinutes={setMinutes}
+                            setEndTimer={setEndTimer} />
+                    </Container>
+                    <Container className="QuestionContainer">          
+                        <p>{HtmlParser(questions[count].text)}</p>                         
+                    </Container>
                     <Container className="AnswersContainer">
                         <Table className="table-borderless">   
                             {questions[count].answers.map(answer => ( 
@@ -150,7 +99,7 @@ const QuestionDisplay =
                                             <p className="Answers"
                                                 id={answer.id} 
                                                 onClick={() => handleCheck(answer.id)} >     
-                                                {/* {HtmlParser(answer.texte)} */}
+                                                {HtmlParser(answer.text)}
                                             </p>  
                                         </td>   
                                     </tr> 
@@ -159,47 +108,12 @@ const QuestionDisplay =
                         </Table>  
                         
                     </Container> 
-                        /* code */
-                        :   {/* <Container className="ReponsesContainer">
-                                <InputGroup>
-                                    <InputGroup.Prepend>
-                                    <InputGroup.Text>
-                                        <Button className="BasicButton" onClick={interpret}>
-                                            Tester le code
-                                        </Button> 
-                                    </InputGroup.Text>
-                                    </InputGroup.Prepend>
-                                    <FormControl 
-                                        as="textarea" 
-                                        rows={nbLines}
-                                        value={inputText}
-                                        onChange={e => setInputText(e.target.value)} />
-                                </InputGroup>
-                                
-                                <Alert variant="success" show={showGreenAlert}>
-                                    {interpretation.interpretated !== null ?
-                                        JSON.stringify(interpretation.interpretated) :
-                                            null
-                                    }
-                                </Alert>
-
-                                <Alert variant="danger" show={showRedAlert} >
-                                    {interpretation.error !== null ?
-                                        interpretation.error :
-                                            interpretation.interpretated === null ?
-                                                "Le code n'est pas interprétable" :
-                                                    null
-                                    }
-                                </Alert>
-                            </Container> */}
-            }
-
-                <Container className="ButtonPlacementQuestions">
-                    <Button className="BasicButton ValidateButton" /* type="submit" */ onClick={doNext}>
-                            Valider
-                    </Button>   
-                </Container>
-            </Form>
+                    <Container className="ButtonPlacementQuestions">
+                        <Button className="BasicButton ValidateButton" /* type="submit" */ onClick={doNext}>
+                                Valider
+                        </Button>   
+                    </Container>
+            </>
             );
 }
 

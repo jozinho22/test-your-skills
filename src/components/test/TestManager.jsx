@@ -1,36 +1,22 @@
 import React from 'react';
-import { Container, Spinner } from 'react-bootstrap';
 import { Redirect } from 'react-router-dom';
-import Error from '../general-content/Error';
-import '../general-content/Basic.css';
+import CustomSpinner from '../general-content/CustomSpinner';
 
-const TestManager = ({isLoading, hasError, count, questions, user, children}) => {
-    
+const TestManager = ({count, questions, user, children}) => {
+
+    console.log(questions)
+        console.log(count)
+
     return (
-            hasError ?
-
-                <Error /> :
-                
-                    isLoading ?
-
-                        <Container className="RelativeContainer">
-                            <div className="LoadingSpinner">
-                                <p>Loading...</p>
-                                <Spinner animation="border" />
-                            </div> 
-                        </Container> :
-                            
-                            count < questions.length ? 
-
-                                children : 
-
-                                    <Redirect
-                                        to={{
-                                        pathname: "/results",
-                                        questions: questions,
-                                        user: user
-                                    }}
-                                />
+                count < questions.length ? 
+                    children
+                        :   <Redirect
+                                to={{
+                                pathname: "/results",
+                                questions: questions,
+                                user: user
+                            }}
+                    />
             );
 }
  

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 import HomeManager from './HomeManager';
-import useTopicsLoading from './useTopicsLoading';
+import jsonTopics from '../../resources/topics.json';
 import moveArrowTopics from './moveArrowTopics';
 import TopicListTitle from './TopicListTitle';
 import TopicList from './TopicList';
@@ -11,12 +11,10 @@ import '../general-content/Basic.css';
 
 const Home = () => {
 
-    const [topics, setTopics] = React.useState([]);
+    const [topics, setTopics] = React.useState(jsonTopics);
     const [nbQuestions, setNbQuestions] = React.useState(5);
     const [isLoading, setIsLoading] = React.useState(true);
     const [allChosen, setAllChosen] = React.useState(false);
-
-    useTopicsLoading( {topics, setTopics, setIsLoading} );
 
     const chooseTopic = (id) => {
         const topicsSlice = [...topics];
@@ -42,17 +40,10 @@ const Home = () => {
     }
  
     React.useEffect(() => {
-        window.sessionStorage.removeItem('authToken');
-        window.sessionStorage.removeItem('role');
-
-        if(!isLoading) {
-            moveArrowTopics();
-        }
-    }, [isLoading]);
-
+        moveArrowTopics();
+    }, []);
 
     return (
-            <HomeManager isLoading={isLoading}>
                 <Container className="RelativeContainer" >
                     <TopicListTitle />
                     <TopicList 
@@ -65,7 +56,6 @@ const Home = () => {
                         nbQuestions={nbQuestions}/>
                     <RadioRennes /> 
                 </Container>
-            </HomeManager>
             );
 }
 

@@ -26,11 +26,6 @@ const Header = () => {
                 className="CustomDropdownButton" >
                 <Dropdown.Item className="Brazil" eventKey="Brazil" as="button" >Brazil</Dropdown.Item>
                 <Dropdown.Item className="Darcula" eventKey="Darcula" as="button" >Darcula</Dropdown.Item>
-                <Dropdown.Item className="Forest" eventKey="Forest" as="button" >Forest</Dropdown.Item>
-                <Dropdown.Item className="Shades" eventKey="Shades" as="button" >Shades</Dropdown.Item>
-                <Dropdown.Item className="Purple" eventKey="Purple" as="button" >Purple</Dropdown.Item>
-                <Dropdown.Item className="Bordeaux" eventKey="Bordeaux" as="button" >Bordeaux</Dropdown.Item>
-                <Dropdown.Item className="Africa" eventKey="Africa" as="button" >Africa</Dropdown.Item>
             </DropdownButton>
         );
     }

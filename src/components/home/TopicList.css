@@ -8,7 +8,12 @@
     position: relative;
 }
 
-.TopicListTable {
+.TopicList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
     width : 50%;
     margin: auto;
 }
@@ -17,7 +22,7 @@
     .TopicListContainer {
         padding-bottom: 0;
     }    
-    .TopicListTable {
+    .TopicList {
         width : 30%;
     }
     .CustomMoveArrow {
@@ -42,3 +47,17 @@
     border-color: var(--button-2-color)!important;
     color: var(--button-text-color)!important;
  }
+
+ .TopicChoiceButton {
+    background-color: var(--button-3-color)!important;
+    border-color: var(--button-3-color)!important;
+    color: var(--button-text-color)!important;
+ }
+
+ .TopicChoiceButton.Chosen {
+    background-color: var(--button-3-hover-color)!important;
+    border-color: var(--button-3-hover-color)!important;
+ }
+
+
+

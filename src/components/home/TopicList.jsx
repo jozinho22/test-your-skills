@@ -1,10 +1,12 @@
 import React from 'react';
-import { Container, Table, Button } from 'react-bootstrap';
+import { Container, Button } from 'react-bootstrap';
 import TopicListTable from './TopicListTable';
 import './TopicList.css';
 import '../general-content/Basic.css';
 
 const TopicList = ( { topics, onChoose, chooseAll, allChosen } ) => {
+
+    console.log(topics)
 
         return (
             <Container fluid className="TopicListContainer">
@@ -19,17 +21,18 @@ const TopicList = ( { topics, onChoose, chooseAll, allChosen } ) => {
                         }
                     </Button>
                 </Container>
-                <Table className="TopicListTable table-borderless">
-                    <tbody>
-                        {topics.map(topic => (
-                            <TopicListTable 
-                                key={topic.id}
-                                topic={topic}
-                                onChoose={onChoose} 
-                            />
-                        ))}
-                    </tbody>
-                </Table>
+                <Container className="TopicList">
+                   
+                    {topics.map(topic => (
+                        <Button className={`TopicChoiceButton ${topic.chosen ? "Chosen" : ""}`}
+                            key={topic.id}
+                            topic={topic}
+                            onClick={() => onChoose(topic.id)}  >
+                            {topic.name}
+                        </Button>
+                    ))}
+                
+                </Container>
             </Container>
             );
 }
