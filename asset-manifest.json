@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/test-your-skills/static/css/main.31dc9253.css",
-    "main.js": "/test-your-skills/static/js/main.943e8316.js",
+    "main.css": "/test-your-skills/static/css/main.86424ddb.css",
+    "main.js": "/test-your-skills/static/js/main.a4c8f826.js",
     "static/js/377.2eccd553.chunk.js": "/test-your-skills/static/js/377.2eccd553.chunk.js",
     "static/media/choco.otf": "/test-your-skills/static/media/choco.450c9519f3be2d17da9f.otf",
     "index.html": "/test-your-skills/index.html",
-    "main.31dc9253.css.map": "/test-your-skills/static/css/main.31dc9253.css.map",
-    "main.943e8316.js.map": "/test-your-skills/static/js/main.943e8316.js.map",
+    "main.86424ddb.css.map": "/test-your-skills/static/css/main.86424ddb.css.map",
+    "main.a4c8f826.js.map": "/test-your-skills/static/js/main.a4c8f826.js.map",
     "377.2eccd553.chunk.js.map": "/test-your-skills/static/js/377.2eccd553.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.31dc9253.css",
-    "static/js/main.943e8316.js"
+    "static/css/main.86424ddb.css",
+    "static/js/main.a4c8f826.js"
   ]
 }
