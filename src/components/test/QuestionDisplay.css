@@ -34,6 +34,10 @@
     padding-top: 20px;
 }
 
+.AnswersContainer table {
+    --bs-table-bg : var(--back-color);
+}
+
 .AnswersContainer p { 
     padding-left: 20px;
     text-align: justify;
@@ -79,7 +83,6 @@
 
 .Timer h1 {
    font-family: var(--choco-font-family);
-   font-size: x-large;
 }
 
 .Indent1 {

@@ -12,11 +12,15 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    gap: 20px;
+    gap: 40px;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     width : 50%;
     margin: auto;
+}
+
+.TopicList button {
+    flex: 1 1 25%; 
 }
 
 @media(max-width: 768px) {
@@ -26,20 +30,24 @@
     .TopicList {
         width : 100%;
     }
+    .TopicList button {
+        flex: 1 1 25%; 
+    }
+
     .CustomMoveArrow {
         display: none;
     }
 }
 
 .ChooseAllButton {
-	background-color: var(--button-2-color);
-    border-color: var(--button-2-color);
+	background-color: var(--button-2-color) !important;
+    border-color: var(--button-2-color) !important;
     color: var(--button-text-color);
 }
 
 .ChooseAllButton:hover, .ChooseAllButton:active {
-    background-color: var(--button-2-hover-color);
-    border-color: var(--button-2-hover-color);
+    background-color: var(--button-2-hover-color) !important;
+    border-color: var(--button-2-hover-color) !important;
     color: var(--button-text-color);
  }
 

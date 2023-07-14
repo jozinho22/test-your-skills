@@ -5,6 +5,13 @@
     /* refers to the Footer */
     padding-bottom: 40px; 
     min-height: 100vh; 
+    font-size: 20px;
+}
+
+@media(max-width: 768px) {
+  .RelativeContainer {
+     font-size: 17px;
+  }
 }
 
 .ChocoTitle {
@@ -33,6 +40,15 @@
 	background-color: var(--button-color);
     border-color: var(--button-color);
     color: var(--button-text-color);
+     padding: 20px !important;
+    font-size: larger !important;
+}
+
+@media(max-width: 768px) {
+  .BasicButton {
+    padding: 10px !important;
+    font-size: larger !important;
+  }
 }
 
 .BasicButton:hover {
@@ -62,3 +78,4 @@
         padding-right: 15px;
     }
 }
+
