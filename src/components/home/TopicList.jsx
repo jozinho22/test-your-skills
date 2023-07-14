@@ -12,7 +12,7 @@ const TopicList = ( { topics, onChoose, chooseAll, allChosen } ) => {
                 
                 <Container fluid style={{paddingBottom: "30px"}}>
                     <Button 
-                        className="BasicButton ChooseAllButton"
+                        className="ChooseAllButton BasicButton"
                         onClick={chooseAll} >
                         {allChosen ? 
                             "Tout décocher" :
@@ -22,7 +22,7 @@ const TopicList = ( { topics, onChoose, chooseAll, allChosen } ) => {
                 </Container>
                 <Container className="TopicList"> 
                     {topics.filter(t => t.topicKey !== "JAVASCRIPT").map(topic => (
-                        <Button className={`TopicChoiceButton BasicButton ${topic.chosen ? "Chosen" : ""}`}
+                        <Button className={`TopicChoiceButton ${topic.chosen ? "Chosen" : ""} BasicButton`}
                             key={topic.id}
                             topic={topic}
                             onClick={() => onChoose(topic.id)}  >

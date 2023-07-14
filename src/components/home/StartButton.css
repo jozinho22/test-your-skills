@@ -1,4 +1,19 @@
 .StartButton button {
     padding: 20px;
-    width: 50%;
+    margin: 0 auto;
 }
+
+.StartButton {
+	background-color: var(--button-color) !important;
+    border-color: var(--button-color) !important;
+}
+
+.StartButton:hover, .StartButton:active {
+    background-color: var(--button-hover-color) !important;
+    border-color: var(--button-hover-color) !important;
+ }
+
+.StartButton:focus {
+    background-color: var(--button-color)!important;
+    border-color: var(--button-color)!important;
+ }

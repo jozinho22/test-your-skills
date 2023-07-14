@@ -64,7 +64,7 @@ const ResultsAccordion = ( {questions, user} ) => {
                                             :   <span>
                                                     <br></br>
                                                     <br></br>
-                                                    <span style={{color: "red"}}>
+                                                    <span style={{color: "#BA3B3B"}}>
                                                         Mauvaise réponse...
                                                     </span>
                                                     <br></br>

@@ -5,7 +5,7 @@
     /* refers to the Footer */
     padding-bottom: 40px; 
     min-height: 100vh; 
-    font-size: 20px;
+    font-size: 17px;
 }
 
 @media(max-width: 768px) {
@@ -37,11 +37,15 @@
 }
 
 .BasicButton {
-	background-color: var(--button-color);
-    border-color: var(--button-color);
-    color: var(--button-text-color);
-     padding: 20px !important;
+    padding: 20px !important;
     font-size: larger !important;
+    color: var(--button-text-color)  !important;
+}
+
+.BasicButtonColor {
+	background-color: var(--button-color)  !important;
+    border-color: var(--button-color)  !important;
+    color: var(--button-text-color)  !important;
 }
 
 @media(max-width: 768px) {
@@ -51,16 +55,16 @@
   }
 }
 
-.BasicButton:hover {
-    background-color: var(--button-hover-color);
-    border-color: var(--button-hover-color);
-    color: var(--button-text-color);
+.BasicButtonColor:hover {
+    background-color: var(--button-hover-color) !important;
+    border-color: var(--button-hover-color)!important;
+    color: var(--button-text-color) !important;
  }
 
-.BasicButton:focus, .BasicButton:active {
-    background-color: var(--button-hover-color)!important;
-    border-color: var(--button-hover-color)!important;
-    color: var(--button-text-color)!important;
+.BasicButtonColor:focus, .BasicButtonColor:active {
+    background-color: var(--button-hover-color) !important;
+    border-color: var(--button-hover-color) !important;
+    color: var(--button-text-color) !important;
 }
 
 .btn:focus, .btn:active {

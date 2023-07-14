@@ -40,6 +40,7 @@ const Home = ( props ) => {
     return (
             <Container className="RelativeContainer" >
                 <TopicListTitle />
+                <p>Si vous n'avez rien coché, tous les sujets seront dans le test</p>
                 <TopicList 
                     topics={props.topics} 
                     onChoose={chooseTopic}

@@ -29,10 +29,12 @@
 
   #dropdown-item-button, #dropdown-item-button:focus {
     border-color: var(--back-color);
+     background-color: var(--back-color);
   }
 
   #dropdown-item-button:hover {
     border-color: var(--front-color);
+    background-color: var(--back-color);
   }
 
   .dropdown-menu {

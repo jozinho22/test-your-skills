@@ -7,11 +7,12 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import NAV_URLS from './components/general-content/NAV_URLS';
 import pathBuilder from './components/general-content/pathBuilder';
+import AppManager from './components/AppManager';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 import './App.css';
 import './components/general-content/Basic.css';
-import AppManager from './components/AppManager';
 
 function App() {
 

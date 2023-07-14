@@ -4,8 +4,8 @@ import './StartButton.css';
 const StartButton = ( {setRunning} ) => {
 
     return (
-            <Container className="StartButton ButtonPlacement">
-                <Button className="BasicButton" onClick={() => setRunning(true)} >
+            <Container className="ButtonPlacement">
+                <Button className="BasicButton StartButton" onClick={() => setRunning(true)} >
                     Let's go
                 </Button>
             </Container>

@@ -51,6 +51,8 @@
   --button-2-hover-color: var(--brazil-button-2-hover-color);
   --button-3-color: var(--brazil-button-3-color);
   --button-3-hover-color: var(--brazil-button-3-hover-color);
+  --chosen-button-color: var(--brazil-chosen-button-color);
+  --chosen-button-hover-color: var(--brazil-chosen-button-hover-color);
   --question-code-color: var(--brazil-question-code-color);
   --reponses-code-color: var(--brazil-reponses-code-color);
   --links-color: var(--brazil-links-color);
@@ -71,6 +73,8 @@
   --button-2-hover-color: var(--darcula-button-2-hover-color);
   --button-3-color: var(--darcula-button-3-color);
   --button-3-hover-color: var(--darcula-button-3-hover-color);
+  --chosen-button-color: var(--darcula-chosen-button-color);
+  --chosen-button-hover-color: var(--darcula-chosen-button-hover-color);
   --question-code-color: var(--darcula-question-code-color);
   --reponses-code-color: var(--darcula-reponses-code-color);
   --links-color: var(--darcula-links-color);

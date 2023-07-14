@@ -72,12 +72,12 @@ const QuestionDisplay =
     return (
                 <>
                     <Container className ="Timer">
-                        <Timer 
+                        {/* <Timer 
                             secondes={secondes}
                             setSecondes={setSecondes} 
                             minutes={minutes}
                             setMinutes={setMinutes}
-                            setEndTimer={setEndTimer} />
+                            setEndTimer={setEndTimer} /> */}
                     </Container>
                     <Container className="QuestionContainer">          
                         {HtmlParser(questions[count].text)}                         
