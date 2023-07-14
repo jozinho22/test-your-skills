@@ -1,19 +1,12 @@
 import React from 'react';
-import { Redirect } from 'react-router-dom';
-import CustomSpinner from '../general-content/CustomSpinner';
+import Results from '../results/Results';
 
-const TestManager = ({count, questions, user, children}) => {
+const TestManager = ({count, questions, user, children, setRunning}) => {
 
     return (
                 count < questions.length ? 
                     children
-                        :   <Redirect
-                                to={{
-                                pathname: "/results",
-                                questions: questions,
-                                user: user
-                            }}
-                    />
+                        :   <Results questions={questions} user={user} setRunning={setRunning}/>
             );
 }
  

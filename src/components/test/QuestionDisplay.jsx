@@ -3,11 +3,11 @@ import { Container, Button, Table } from 'react-bootstrap';
 import { FaArrowRight } from 'react-icons/fa';
 import HtmlParser from 'react-html-parser'; 
 import Timer from './Timer';
-import { parse } from 'node-html-parser';
+/* import { parse } from 'node-html-parser'; */
 import './QuestionDisplay.css';
 
 const QuestionDisplay = 
-        ({ questions, count, next, user, setUser }) => {
+        ({ questions, count, next, user, setUser, setRunning}) => {
 
     const [checkedAnswerId, setCheckedAnswerId] = React.useState(0);
 

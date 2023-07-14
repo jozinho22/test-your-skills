@@ -1,14 +1,10 @@
-import { useLocation } from 'react-router-dom';
 import { Button, Container } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 import ResultsAccordion from './ResultsAccordion';
 import ScoreTitle from './ScoreTitle';
+
 import '../general-content/Basic.css';
 
-const Results = () => {
-
-    const { questions } = useLocation();
-    const { user } = useLocation();
+const Results = ( {questions, user, setRunning} ) => {
 
     return (
         <Container className="RelativeContainer">
@@ -21,11 +17,9 @@ const Results = () => {
             </Container>
             
             <Container className="ButtonPlacement">
-                <Link to="/home" >
-                    <Button className="BasicButton ReturnButton" >
-                        Retour au lobby
-                    </Button>
-                </Link>
+                <Button className="BasicButton ReturnButton" onClick={() => setRunning(false)}>
+                    Retour au lobby
+                </Button>
             </Container>
         </Container>
     );

@@ -1,14 +1,10 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
 import generateQuestions from './generateQuestions';
 import TestManager from './TestManager';
 import { Container } from 'react-bootstrap';
 import QuestionDisplay from './QuestionDisplay';
 
-const Test = () => {
-
-    const { topics } = useLocation();
-    const { nbQuestions } = useLocation();
+const Test = ( {topics, nbQuestions, setRunning} ) => {
     
     const [questions, setQuestions] = React.useState(generateQuestions(topics, nbQuestions));
 
@@ -26,7 +22,7 @@ const Test = () => {
     }
     
     return (
-            <TestManager count={count} questions={questions} user={user}>
+            <TestManager count={count} questions={questions} user={user} setRunning={setRunning}>
                 <Container className="RelativeContainer" >
                     <div className="ChocoTitle">
                         <h1><u>Questions N° :</u> &nbsp; {count + 1}</h1>
@@ -36,7 +32,7 @@ const Test = () => {
                         count={count}
                         next={next}
                         user={user}
-                        setUser={setUser} /> 
+                        setUser={setUser}  /> 
                 </Container >
             </TestManager>
             );

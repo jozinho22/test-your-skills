@@ -1,21 +1,17 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
-import jsonTopics from '../../resources/topics.json';
 import moveArrowTopics from './moveArrowTopics';
 import TopicListTitle from './TopicListTitle';
 import TopicList from './TopicList';
 import StartButton from './StartButton';
 import '../general-content/Basic.css';
 
-const Home = () => {
+const Home = ( props ) => {
 
-    const [topics, setTopics] = React.useState(jsonTopics);
-    const [nbQuestions, setNbQuestions] = React.useState(10);
-    const [isLoading, setIsLoading] = React.useState(true);
     const [allChosen, setAllChosen] = React.useState(false);
 
     const chooseTopic = (id) => {
-        const topicsSlice = [...topics];
+        const topicsSlice = [...props.topics];
         const index = topicsSlice.findIndex(topic => topic.id === id);
         
         if(topicsSlice[index].chosen === true) {
@@ -23,17 +19,17 @@ const Home = () => {
         } else {
             topicsSlice[index].chosen = true;
         }
-        setTopics(topicsSlice);
+        props.setTopics(topicsSlice);
     }
 
     const chooseAll = () => {
-        const topicsSlice = [...topics];
+        const topicsSlice = [...props.topics];
         if(!allChosen) {
             topicsSlice.forEach(topic => topic.chosen = true);
         } else {
             topicsSlice.forEach(topic => topic.chosen = false);
         }
-        setTopics(topicsSlice);
+        props.setTopics(topicsSlice);
         setAllChosen(!allChosen);
     }
  
@@ -42,17 +38,16 @@ const Home = () => {
     }, []);
 
     return (
-                <Container className="RelativeContainer" >
-                    <TopicListTitle />
-                    <TopicList 
-                        topics={topics} 
-                        onChoose={chooseTopic}
-                        chooseAll={chooseAll}
-                        allChosen={allChosen} />
-                    <StartButton 
-                        topics={topics}
-                        nbQuestions={nbQuestions}/>
-                </Container>
+            <Container className="RelativeContainer" >
+                <TopicListTitle />
+                <TopicList 
+                    topics={props.topics} 
+                    onChoose={chooseTopic}
+                    chooseAll={chooseAll}
+                    allChosen={allChosen} />
+                <StartButton 
+                    setRunning={props.setRunning}/>
+            </Container>
             );
 }
 

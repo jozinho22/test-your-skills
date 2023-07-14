@@ -8,12 +8,15 @@ import Error from './components/general-content/Error';
 import Footer from './components/general-content/Footer';
 import ThemeContext from './components/context/ThemeContext';
 
-import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
+import NAV_URLS from './components/general-content/NAV_URLS';
+import pathBuilder from './components/general-content/pathBuilder';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import './components/general-content/Basic.css';
-
+import AppManager from './components/AppManager';
 
 function App() {
 
@@ -31,13 +34,10 @@ function App() {
                     <div className={theme}>
                         <BrowserRouter>
                             <Header />
-                                <Switch>
-                                    <Route exact path="/" component={Home} />
-                                    <Route path="/test" component={Test} />
-                                    <Route path="/results" component={Results} />
-                                    <Route path="/error" component={Error} />
-                                    <Redirect to="/" />
-                                </Switch>
+                                <Routes>
+                                    <Route exact path={pathBuilder(NAV_URLS.HOME)} element={<AppManager />} />
+                                    <Route path={pathBuilder("*")} element={<AppManager />} status={404}/>
+                                </Routes>
                             <Footer />
                         </BrowserRouter>
                     </div>

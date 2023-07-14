@@ -1,0 +1,9 @@
+ const NAV_URLS = {
+    GH_PREFIX: "/test-your-skills",
+    HOME: "/",
+    TEST: "/test",
+    RESULTS: "/results",
+    ERROR: "/error",
+}
+
+export default NAV_URLS;
