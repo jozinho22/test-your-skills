@@ -10,8 +10,8 @@ import ThemeContext from './components/context/ThemeContext';
 
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-
 import './components/general-content/Basic.css';
 
 
