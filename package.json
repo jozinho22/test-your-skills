@@ -2,6 +2,7 @@
   "name": "test-your-skills",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://jozinho22.github.io/test-your-skills",
   "bin": "./bin/npm-cli.js",
   "dependencies": {
     "@material-ui/core": "^4.11.2",
@@ -29,7 +30,6 @@
   "scripts": {
     "start": "BROWSER=none react-scripts start",
     "build": "CI=false react-scripts build",
-    "postbuild": "react-spa-prerender",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "test": "react-scripts test",

@@ -1,10 +1,5 @@
 import React from 'react';
 import Header from './components/general-content/Header';
-import Home from './components/home/Home';
-import Test from './components/test/Test';
-import Results from './components/results/Results';
-
-import Error from './components/general-content/Error';
 import Footer from './components/general-content/Footer';
 import ThemeContext from './components/context/ThemeContext';
 
