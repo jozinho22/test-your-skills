@@ -10,7 +10,7 @@ import '../general-content/Basic.css';
 const Home = () => {
 
     const [topics, setTopics] = React.useState(jsonTopics);
-    const [nbQuestions, setNbQuestions] = React.useState(5);
+    const [nbQuestions, setNbQuestions] = React.useState(10);
     const [isLoading, setIsLoading] = React.useState(true);
     const [allChosen, setAllChosen] = React.useState(false);
 

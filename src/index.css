@@ -23,7 +23,7 @@ body {
   --brazil-links-color: var(--brazil-back-color);
 
   --darcula-back-color:  #343a40;
-  --darcula-front-color: grey;
+  --darcula-front-color: var( --grey-color);
   --darcula-title-color: rgb(98, 72, 141);
   --darcula-check-color: green;
   --darcula-button-text-color: var(--darcula-front-color);
@@ -37,6 +37,9 @@ body {
   --darcula-reponses-code-color: #A0522D;
   --darcula-links-color: var(--darcula-button-2-color);
 
+  --reponses-back-color: var(--grey-color);
+  --grey-color: grey;
+  
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
