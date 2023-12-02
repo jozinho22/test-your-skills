@@ -17,7 +17,7 @@ const Results = ( {questions, user, setRunning} ) => {
             </Container>
             
             <Container className="ButtonPlacement">
-                <Button className="BasicButton ReturnButton" onClick={() => setRunning(false)}>
+                <Button className="BasicButton BasicButtonColor" onClick={() => setRunning(false)}>
                     Retour au lobby
                 </Button>
             </Container>

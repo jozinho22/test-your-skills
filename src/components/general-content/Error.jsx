@@ -6,7 +6,7 @@ const Error = ( { message } ) => {
                 <div className="LoadingSpinner">
                     <p>Erreur...</p>
                     <br></br>
-                        <Button className="BasicButton BasicButtonColor ReturnButton">
+                        <Button className="BasicButton BasicButtonColor">
                             Retour au lobby
                         </Button>
                 </div> 

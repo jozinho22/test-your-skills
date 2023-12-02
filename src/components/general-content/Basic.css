@@ -37,9 +37,10 @@
 }
 
 .BasicButton {
-    padding: 20px !important;
-    font-size: larger !important;
-    color: var(--button-text-color)  !important;
+    padding: 10px !important;
+    font-size: large !important;
+    color: var(--button-text-color) !important;
+    box-shadow: 3px 3px 0px 0px var(--button-shadow-color);
 }
 
 .BasicButtonColor {

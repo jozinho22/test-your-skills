@@ -56,6 +56,8 @@
   --question-code-color: var(--brazil-question-code-color);
   --reponses-code-color: var(--brazil-reponses-code-color);
   --links-color: var(--brazil-links-color);
+  --bg-home-color: var(--brazil-bg-home-color);
+  --button-shadow-color: var(--brazil-button-shadow-color);
 
 }
   
@@ -78,4 +80,7 @@
   --question-code-color: var(--darcula-question-code-color);
   --reponses-code-color: var(--darcula-reponses-code-color);
   --links-color: var(--darcula-links-color);
+  --bg-home-color: var(--darcula-bg-home-color);
+  --button-shadow-color: var(--darcula-button-shadow-color);
+
 }

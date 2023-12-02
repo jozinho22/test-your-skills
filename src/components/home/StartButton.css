@@ -4,16 +4,16 @@
 }
 
 .StartButton {
-	background-color: var(--button-color) !important;
-    border-color: var(--button-color) !important;
+	background-color: var(--button-2-color) !important;
+    border-color: var(--button-2-color) !important;
 }
 
 .StartButton:hover, .StartButton:active {
-    background-color: var(--button-hover-color) !important;
-    border-color: var(--button-hover-color) !important;
+    background-color: var(--button-2-hover-color) !important;
+    border-color: var(--button-2-hover-color) !important;
  }
 
 .StartButton:focus {
-    background-color: var(--button-color)!important;
-    border-color: var(--button-color)!important;
+    background-color: var(--button-2-color)!important;
+    border-color: var(--button-2-color)!important;
  }
