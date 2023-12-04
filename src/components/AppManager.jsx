@@ -7,7 +7,7 @@ import Test from './test/Test';
 const AppManager = () => {
 
     const [topics, setTopics] = React.useState(jsonTopics);
-    const [nbQuestions, setNbQuestions] = React.useState(/* process.env.NODE_ENV === 'development' ? 1 : */ 10);
+    const [nbQuestions, setNbQuestions] = React.useState(process.env.NODE_ENV === 'development' ? 1 : 10);
 
     const [isRunning, setRunning] = React.useState(false);
 

@@ -59,8 +59,8 @@ const QuestionDisplay =
     React.useEffect(() => {
         setEndTimer(false);
         if(process.env.NODE_ENV === 'development') {
-         /*    setTimer(5);
-        } else { */
+            setTimer(5);
+        } else { 
             setTimer(60);
         }
         
