@@ -7,7 +7,7 @@ import Timer from './Timer';
 import './QuestionDisplay.css';
 
 const QuestionDisplay = 
-        ({ questions, count, next, user, setUser, setRunning}) => {
+        ({ questions, count, next, user, setUser}) => {
 
     const [checkedAnswerId, setCheckedAnswerId] = React.useState(0);
 
@@ -59,8 +59,8 @@ const QuestionDisplay =
     React.useEffect(() => {
         setEndTimer(false);
         if(process.env.NODE_ENV === 'development') {
-            setTimer(5);
-        } else {
+         /*    setTimer(5);
+        } else { */
             setTimer(60);
         }
         
@@ -72,12 +72,12 @@ const QuestionDisplay =
     return (
                 <>
                     <Container className ="Timer">
-                        {/* <Timer 
-                            secondes={secondes}
-                            setSecondes={setSecondes} 
-                            minutes={minutes}
-                            setMinutes={setMinutes}
-                            setEndTimer={setEndTimer} /> */}
+                    <Timer 
+                        secondes={secondes}
+                        setSecondes={setSecondes} 
+                        minutes={minutes}
+                        setMinutes={setMinutes}
+                        setEndTimer={setEndTimer} /> 
                     </Container>
                     <Container className="QuestionContainer">          
                         {HtmlParser(questions[count].text)}                         

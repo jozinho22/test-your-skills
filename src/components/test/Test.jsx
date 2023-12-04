@@ -7,6 +7,14 @@ import QuestionDisplay from './QuestionDisplay';
 const Test = ( {topics, nbQuestions, setRunning} ) => {
     
     const [questions, setQuestions] = React.useState(generateQuestions(topics, nbQuestions));
+    
+    React.useEffect(() => {
+         questions.map((q) => {
+            console.log(q.id)
+        })
+
+    }, [])
+   
 
     const [count, setCount] = React.useState(0);
     const [user, setUser] = React.useState(
