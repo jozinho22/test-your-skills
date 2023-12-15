@@ -16,14 +16,14 @@ body {
   --brazil-button-hover-color:var(--brazil-check-color);
   --brazil-button-2-color:  #516ece;
   --brazil-button-2-hover-color: rgb(63, 73, 158);
-  --brazil-button-3-color:  #3c8d42;
-  --brazil-button-3-hover-color: #3e8143;
-  --brazil-chosen-button-color: #866c3c;
-  --brazil-chosen-button-hover-color: #5f4d2c;
+  --brazil-button-3-color:  #866c3c;
+  --brazil-button-3-hover-color: #5f4d2c;
+  --brazil-chosen-button-color: #3c8d42;
+  --brazil-chosen-button-hover-color: #3e8143;
   --brazil-question-code-color:rgb(179, 175, 175);
   --brazil-reponses-code-color: #2a418b;
   --brazil-links-color: var(--brazil-back-color);
-  --brazil-bg-home-color: rgb(164, 165, 164);
+  --brazil-bg-home-color: rgb(181, 185, 181);
   --brazil-button-shadow-color : grey;
 
   --darcula-back-color:  #343a40;
@@ -37,8 +37,8 @@ body {
   --darcula-button-2-hover-color: var( --darcula-button-hover-color);
   --darcula-button-3-color:  #4c4e55;
   --darcula-button-3-hover-color: #656566;
-  --darcula-chosen-button-color: #866c3c;
-  --darcula-chosen-button-hover-color: #5f4d2c;
+  --darcula-chosen-button-color: #3c6e40;
+  --darcula-chosen-button-hover-color: rgb(60, 102, 63);
   --darcula-question-code-color: #773e1e;
   --darcula-reponses-code-color: #A0522D;
   --darcula-links-color: var(--darcula-button-2-color);
